@@ -1,0 +1,11 @@
+{
+  "appDefinitionId": "f820b71f-373d-4bc6-9f52-ca52da61122d",
+  "appName": "chen-ooi-widget",
+  "sled": {
+    "testUserEmail": "wixqatest.yoshi@gmail.com"
+  },
+ "experiments": {
+    "scopes": ["test"],
+    "centralized": true
+  }
+}

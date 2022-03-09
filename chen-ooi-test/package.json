@@ -1,0 +1,69 @@
+{
+  "name": "@wix/chen-ooi-test",
+  "version": "1.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "author": {
+    "name": "Chenk14",
+    "email": "chenk@wix.com"
+  },
+  "scripts": {
+    "start": "yoshi-flow-editor start",
+    "build": "yoshi-flow-editor build",
+    "lint": "yoshi-flow-editor lint",
+    "test": "npm run test:unit && npm run test:sled",
+    "test:sled": "SLED_PERFER=true sled-test-runner remote",
+    "test:sled:local": "SLED_PERFER=true sled-test-runner local",
+    "test:unit": "yoshi-flow-editor test",
+    "posttest": "npm run lint",
+    "add": "yoshi-flow-editor add"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": "yoshi-flow-editor lint"
+  },
+  "jest": {
+    "preset": "@wix/yoshi-flow-editor"
+  },
+  "dependencies": {
+    "@wix/wix-base-ui": "^3.1321.0",
+    "@wix/yoshi-flow-editor": "^5.0.0",
+    "react": "~16.13.0",
+    "react-dom": "~16.13.0",
+    "wix-ui-tpa": "^2.72.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@types/jest": "^26.0.15",
+    "@types/react": "^16.9.15",
+    "@types/react-dom": "^16.9.5",
+    "@wix/perfer-sled": "^1.0.0",
+    "@wix/perfer-viewer-utils": "^1.0.0",
+    "@wix/sled-test-runner": "^1.0.819",
+    "husky": "~4.2.1",
+    "lint-staged": "^10.0.7",
+    "lodash": "^4.17.11",
+    "puppeteer": "^5.5.0",
+    "typescript": "^4.1.2"
+  },
+  "perfer": {
+    "preset": "@wix/yoshi-flow-editor/perfer-preset"
+  },
+  "wix": {
+    "artifact": {
+      "groupId": "com.wixpress",
+      "artifactId": "chen-ooi-test",
+      "targets": {
+        "static": true
+      }
+    }
+  },
+  "wallaby": {
+    "autoDetect": true
+  }
+}

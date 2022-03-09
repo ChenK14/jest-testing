@@ -1,0 +1,7 @@
+{
+  "extends": "@wix/yoshi-flow-editor/tsconfig.flow.json",
+  "include": ["./src/**/*", "./dev/**/*", "./__tests__/**/*"],
+  "files": [
+    "target/generated/flow-types.ts"
+  ]
+}
